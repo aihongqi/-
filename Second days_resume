@@ -1,3 +1,81 @@
 1.Q：HTML是什么，HTML5是什么？
-  A：1)HTML是超文本标记语言，用该语言编写的文件，以.html 或.htm为后缀，由浏览器解释运行，可以嵌入脚本语言编写的程序片段，如JS
-     2)HTML5是最新的第五代HTML标准
+  A：1)HTML是超文本标记语言，用该语言编写的文件，以.html 或.htm为后缀，由浏览器解释运行，可以嵌入脚本语言编写的程序片段，如JS;
+     2)HTML5是最新的第五代HTML标准。
+     
+2.Q：HTML元素标签、属性都是什么概念？
+  A：1)HTML元素标签是一个标记，是指尖括号所包围的内容部分，元素可以包含文本内容或其他元素，也可以为空。
+        例如：<div>被div标签包含的内容</div>
+              <span>      ->  <!-- span 元素包含了 a 元素-->
+                <a></a>
+              </span> 
+              <p></p>  ->  <!--空元素-->
+     2)属性是用来修饰元素的
+        例如：<a id="IFE" class="ife" href="http://ife.baidu.com">百度IFE前端技术学院</a>
+              其中 a 标签的id class href为a标签的属性。
+              
+3.Q：文档类型是什么概念，起什么作用？
+  A：1)文档类型声明指浏览器按照什么样的规则解释文档中的标记;
+     2)不使用文档类型声明，浏览器会启用自己的怪异模式来解析渲染页面，造成在不同浏览器中看到了不同的样式;
+       而使用了<!DOCTYPE html>则会避免这个现象，让浏览器使用W3C的标准来解析渲染页面，这样在不同的浏览器中样式就会相同。
+       
+4.Q：meta标签都用来做什么的？
+  A：位于页面的头部，head标记中，用于记录页面的元信息。
+      例如：常见的以下几种(就是我只知道的这几种...欢迎大牛补充)
+              1)编码格式<meta charset="utf-8">
+              2)关键词<meta name="keywords" content="关键词1,关键词2,关键词3">
+              3)描述信息<meta name="description" content="balabala...描述信息...balabala...">
+              4)视口<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+
+5.Q：WEB语义化是什么，是为了解决什么问题？
+  A：1)人话 —— 让机器可以读懂内容，同样使人更易于理解。
+     2)在团队开发中减少写作成本，比如一个导航，最外层的父级用div/p/ul都可以，但如果用一个nav，就很容易理解，因为nav本身翻译为中文就是引导、导航的意思。
+     
+6.Q：链接是什么概念，对应什么标签？
+  A：1)指向用来组成当前文档的外部资源，通常由UA自动处理。
+     2)link a
+  
+7.Q：常用标签都有哪些，都适合用在什么场景？
+  A：文本样式--i u b s
+     标题元素--h1~h6
+     段落元素--p
+     换行元素--br
+     块分区--div
+     行内分区--span
+     链接--a link
+     表格--table tr td tbody thead tfoot
+     表单--form input button textarea selct option iframe lable
+     有序列表--ol li
+     无序列表--ul li
+     定义列表--dl dt dd
+     结构标记--header nav section article footer aside main
+     
+8.Q：表单标签都有哪些，对应着什么功能，都有哪些属性？
+  A：1)form
+     2)属性功能
+        action：定义表单提交时发生的动作，即要提交的服务器地址，默认提交到本页
+        method：表单数据提交的方式，取值为get(默认值，明文提交)，post(隐性提交)
+        enctype：指定表单数据的编码方式默认值为appliction/x-www-form-urlencoded
+                 提交文件应使用 multipart/form-data
+
+9:Q：ol, ul, li, dl, dd, dt等这些标签都适合用在什么地方，举个例子
+  A：1)ol为有序列表，前面默认会带阿拉伯数字，按照一定的顺序将列表表示出来，比如写一个排名，默认从1开始向下升序排列
+        <ol>
+          <li>小明</li>
+          <li>小丽</li>
+          <li>小雪</li>
+        </ol>
+     2)ul为无需列表，前面默认带圆点，用于列出页面上没有特定次序的一些内容，比如写一个产品介绍，列出它的优点
+        <h1>红旗的优点</h2>
+        <ul>
+          <li>帅啊</li>
+          <li>还是帅啊</li>
+          <li>还还是帅啊</li>
+        </ul>
+      3)dl为定义列表，一般图文混合时使用，如某宝的产品简介。
+        <dl>
+          <dt>
+            <img src="假装有张图">
+          </dt>
+          <dd>假装这里是产品简介</dd>
+          <dd>假装这里是产品的价格</dd>
+        </dl>
