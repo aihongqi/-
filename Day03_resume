@@ -1,0 +1,51 @@
+1.Q:什么是CSS，CSS是如何工作的？
+  A:1) CSS是用来装饰和排版HTML的，如果将HTML比喻成未装修的毛坯房，那么CSS的工作就是对毛坯房进行装修；
+    2) 首先浏览器加载HTML，解析HTML，将其转化为DOM树，然后加载CSS，对CSS进行解析，浏览器将CSS规则应用在DOM树上，
+       以影响HTML的显示方式，最终一个经过CSS装饰的HTML页面显示在浏览器中。
+  
+2.Q:CSS的基本语法是怎样的？
+  A:由 选择器、属性、属性值 组成
+  
+3.Q:CSS选择器是什么概念，简单选择器和属性选择器是什么？
+  A:1) 选择器用来匹配页面上的元素，使相关声明仅被应用到被选择的元素上；
+    2) 选择器可以通过不同的规则来定义；
+    3) 简单选择器是指基于元素的类型(class/id)来直接匹配文档的一个或多个元素；
+    4) 属性选择器是根据元素的 属性和属性值 来匹配元素，通常由方括号组成 [] 
+       例如: [attr]          -- 匹配页面中具有attr属性的所有元素
+             [attr1][attr2]  -- 匹配页面中既有attr1属性同时也具备attr2属性的元素
+             elem[attr]      -- 匹配页面中具备attr属性的elem元素
+             [attr=value]    -- 匹配页面中attr属性值为value的元素
+             [class~=value]  -- 根据部分属性值选择，
+                                class属性(可以用于任何属性，而不只是class)是一个由 空格 隔开的值的列表，value是列表中的独立值
+             [attr^=value]   -- 匹配attr属性值是以value做为开始的元素
+             [attr*=value]   -- 匹配attr属性值中包含value的元素
+             [attr$=value]   -- 匹配attr属性值是以value做为结束的元素
+             
+  
+1.Q:文本样式都有哪些相关属性，对应哪些值？
+  A:
+    字体系列     font-family:Verdana,sans-serif...;
+    字体大小     font-size:px / em / rem;
+    字体加粗     font-weight:normal / bold / 100~900;
+    字体样式     font-style:normal / italic;
+    小型大写字母  font-variant:normal / small-caps;
+    字体属性简写  font:style variant weight size family;
+    
+    文本颜色     color:#aaa / #000000 / red;
+    文本排列     text-align:left / center / right / justify;
+    文本修饰     text-decoration:none / underline / line-through / overline;
+                                        下划线      穿过文本的线       上划线
+    大小写转换   text-transform:none / uppercase / lowercase / captialize / full-width
+                                    所有文本大写  所有文本小写   首字母大写   所有字形转换成固定宽度的正方形
+    行高         line-height:12px / 1.75;
+    首行文本缩进  text-indent:px / em / %;可继承， % 以父元素的宽度为基准
+    文本阴影      text-shadow: h-shadow / v-shadow / blur / color;
+  
+  
+tip:
+    1) 以前在使用line-height时，从未注意和使用过倍数这个概念，推荐直接使用倍数。
+    2) 以前一直使用px...从未使用em和rem，推荐使用rem，以浏览器默认的字体大小16px为基准，按照倍数放大，但不兼容ie8以下(包含ie8)。
+       em是以父级的字体大小为基准，按照倍数放大，不利于计算，但没有兼容性，可以将默认字体大小设置为10，这样解决不利于计算的问题。
+       
+作业链接：https://codepen.io/aihongqi/pen/BxWqvy
+忘记另存一份了....直接在Day02的基础上做了改动...
