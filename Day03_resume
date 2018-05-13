@@ -22,7 +22,7 @@
              [attr$=value]   -- 匹配attr属性值是以value做为结束的元素
              
   
-1.Q:文本样式都有哪些相关属性，对应哪些值？
+4.Q:文本样式都有哪些相关属性，对应哪些值？
   A:
     字体系列     font-family:Verdana,sans-serif...;
     字体大小     font-size:px / em / rem;
