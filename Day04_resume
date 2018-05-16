@@ -1,0 +1,44 @@
+Q:1.背景，边框，列表，链接相关属性
+A:background: color image repeat attachment position;
+    color: #000 / #ac48a00 / white;
+    image: url() / linear-gardient(to bottom / to rght ... color1 color2); tip:color后可接百分比表示开始产生渐变的位置，比如red40% 
+    repeat: no-repeat / repeat-x repeat-y;
+    attachment: scroll fiex;   ->  图像固定
+    position: px / rem / % / top...;
+    
+  border: width style color;
+    style: solid / dotted / dashed / double;
+    color: #000 / #aaa555 / red / transparent;
+    border-radius: px;
+  box-shadow: h-shadow v-shadow blur spread color inset(内部阴影);
+  outline: width style color;     ->  轮廓
+  
+  list-style: type position image;
+    position: inside  ->  项目条目位于行内，默认为行外
+    star -> 自定义开始的数字，写在ul/ol标签
+    reversed  ->  倒序，写在ul/ol标签
+    value  ->  自定义列表数值，写在li标签
+  
+  a:link     ->  尚未访问的链接;       链接伪类
+  a:visited  ->  访问过的链接;         链接伪类
+  a:hover    ->  被激活时(鼠标经过);    结构伪类
+  a:active   ->  鼠标悬停;             结构伪类
+  a:focus    ->  获取焦点;             结构伪类
+  
+  
+Q:2.CSS 各种选择器的概念，使用方法及使用场景
+A: *{}         ->  通用选择器，匹配页面上每一个元素;
+                      因为继承效率的问题，通常用body代替;
+   ANY{}       ->  元素选择器，匹配页面上指定元素的标记;
+   .name1      ->  类选择器，应用在具有对应的class属性的选择器上;
+                   class命名时不能以数字为开始;
+   #idValue{}  ->  与页面指定ID值的元素进行匹配;
+   
+   选择器1,选择器2,选择器3{}  ->  群组选择器，以逗号隔开的选择器列表，可以将一部分样式相同的选择器放在一起定义;
+   选择器1 选择器2{}          ->  后代选择器，通过元素间的后代关系匹配元素;
+   选择器1 > 选择器2{}        ->  子代选择器，通过元素的子代关系匹配元素;
+   选择器1+选择器2{}          ->  相邻兄弟选择器;
+   选择器1~选择器2{}          ->  通用兄弟选择器;
+   [attr]
+
+Q:3.CSS 选择器的优先级
